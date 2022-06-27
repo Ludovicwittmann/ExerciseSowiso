@@ -1,0 +1,41 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: Black;
+  text-align: center;
+  margin-top: 15%;
+}
+
+p {
+  color: wheat;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.historic p {
+  font-size: 20px;
+}
+
+form input.inputAnswer {
+  background-color: white;
+  border-radius: 20px;
+  border: 0;
+  font-size: 30px;
+  height: 40px;
+  width: 40%;
+  text-align: center;
+}
+form input.inputSubmit {
+  background-color: wheat;
+  height: 60px;
+  width: 30%;
+  margin: 30px;
+  font-size: 30px;
+  color: black;
+  border-radius: 30px;
+}
+form input.inputSubmit:hover {
+  background-color: white;
+}/*# sourceMappingURL=style.css.map */
