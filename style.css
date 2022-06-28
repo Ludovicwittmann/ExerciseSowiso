@@ -40,6 +40,34 @@ form input.inputSubmit {
   border-radius: 30px;
 }
 form input.inputSubmit:hover {
-  background-color: rgb(255, 217, 136);
-  width: 32%;
+  background-color: Black;
+  border-color: rgb(255, 211, 115);
+  color: wheat;
+  border-style: solid;
+}
+
+button {
+  background-color: wheat;
+  height: 30px;
+  width: 10%;
+  margin: 5px;
+  font-size: 15px;
+  color: black;
+  border-radius: 30px;
+}
+
+/*button:hover{
+    background-color: $ColorAccent;
+    height: 30px;
+    width : 10%;
+    margin: 5px;
+    font-size: 15px;
+    color: black;
+    border-radius: 30px;
+}*/
+button:hover {
+  background-color: Black;
+  border-color: rgb(255, 211, 115);
+  color: wheat;
+  border-style: solid;
 }/*# sourceMappingURL=style.css.map */

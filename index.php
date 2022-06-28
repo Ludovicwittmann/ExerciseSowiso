@@ -13,7 +13,7 @@ session_start();
     <body>
         <header>
             <nav>
-                <button><a href="./IndexSecond.php">Harder</a></button>
+                <a href="./IndexSecond.php"><button>Harder</button></a>
             </nav>
         </header>
         <main>

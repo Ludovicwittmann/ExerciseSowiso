@@ -11,7 +11,7 @@ session_start();
     <body>
         <header>
             <nav>
-                <button><a href="./Index.php">Easier</a></button>
+                <a href="./Index.php"><button>Easier</button></a>
             </nav>
         </header>
         <main>
@@ -19,12 +19,25 @@ session_start();
                 <?php 
 
                 include "./CalculHarder.php"?>
-                <form action="./index.php" method="post">
+                <form action="./indexSecond.php" method="post">
                     <input type="number" step="0.01" name="responseH" class="inputAnswer">
                     <br>
                     <input type="submit" name="validate" value="Validate"class="inputSubmit">
 
                 </form>
+            </div>
+            <div class="historic">
+                <?php
+                    if(!isset($_SESSION["historic"])){
+                        $_SESSION["historic"] = array();
+                    }else{
+                        array_push($_SESSION["historic"], $_SESSION["lastCalcul"].$_SESSION["lastResult"]." Your answer was : ".$_SESSION["lastAnswer"].".");
+                        for ($i=sizeof($_SESSION["historic"])-2; $i > sizeof($_SESSION["historic"])-10; $i--) { 
+                            echo "<p>".$_SESSION["historic"][$i]."</p>";
+                        }
+                    }
+                
+                ?>
             </div>
             
         </main>

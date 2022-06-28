@@ -1,9 +1,28 @@
 <?php 
+    if($_POST == null){
+        echo "<p> New session </p>";
+    }else{
+        echo "<p>".$_SESSION['lastCalcul']." = ".$_SESSION["lastResult"]."</p>";
+        if($_POST['responseH']==""){
+            echo "<p> You did not given answer.";
+        }else{
+            echo "<p>Your answer was ".$_POST['responseH'];
+            if($_POST['responseH'] == $_SESSION["lastResult"]){
+                echo ". Felicitation !";
+            }else{
+                echo ". You were wrong !"; 
+            }
+        }
+        echo " Try again!</p>"; 
+        
+        $_SESSION["lastAnswer"] = $_POST["responseH"];
+    }
     $objCalulH = new CalculHard();
-    echo "<p>".$objCalulH->stringCalcul."</p>";
-    $objCalulH->solveLoop($objCalulH->stringCalcul);
-    echo "<p>".$objCalulH->solution."</p>";
-
+    $_SESSION["lastResult"] = $objCalulH->solution;
+    $_SESSION["lastCalcul"] = $objCalulH->stringCalcul;
+    
+    
+    echo "<p>".$_SESSION['lastCalcul']."</p>";
     //####################################################################################################################
     class CalculHard{
         private $operator = ["*","/","+","-"];
@@ -13,8 +32,21 @@
         public $solution;
 
         public function __construct(){
-            
+            $this->solveLoop($this->stringCalcul);
         }
+
+
+        public function generateCalcul(){
+            $lenCalcul = rand(2,6);
+            $strCalcul = "";
+            for ($i=0; $i < $lencalcul; $i++) { 
+                $nextNumber = rand(1,10);
+                
+            }
+        }
+
+
+
         public function solveLoop($strCalcul){
             while(str_contains($strCalcul, "(")){
                 $posOfLastParOpen = strrpos($strCalcul, "(");

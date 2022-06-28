@@ -1,5 +1,5 @@
 $FirstColor : wheat;
-$ColorAccent : rgb(255, 217, 136);
+$ColorAccent : rgb(255, 211, 115);
 $BGColor : Black;
 
 //#####################################
@@ -47,4 +47,27 @@ form{
         background-color: $ColorAccent;
         width : 32%;
     }
+}
+button{
+    background-color: $FirstColor;
+    height: 30px;
+    width : 10%;
+    margin: 5px;
+    font-size: 15px;
+    color: black;
+    border-radius: 30px;
+}
+/*button:hover{
+    background-color: $ColorAccent;
+    height: 30px;
+    width : 10%;
+    margin: 5px;
+    font-size: 15px;
+    color: black;
+    border-radius: 30px;
+}*/
+button:hover{
+    background-color: $BGColor;
+    border-color: $ColorAccent;
+    color: $FirstColor;
 }
