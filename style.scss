@@ -1,4 +1,5 @@
 $FirstColor : wheat;
+$ColorAccent : rgb(255, 217, 136);
 $BGColor : Black;
 
 //#####################################
@@ -7,8 +8,11 @@ $BGColor : Black;
 }
 body{
     background-color: $BGColor;
+    
+}
+main{
     text-align: center;
-    margin-top: 15%;
+    margin-top: 14%;
 }
 p{
     color : $FirstColor;
@@ -40,6 +44,7 @@ form{
         border-radius: 30px;
     }
     input.inputSubmit:hover{
-        background-color: white;
+        background-color: $ColorAccent;
+        width : 32%;
     }
 }
